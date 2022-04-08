@@ -1,3 +1,18 @@
+# Boreal Modifications
+
+## Setup environment
+See Dockerfile for specific build detail. In short, 
++ L4T 32.5.0
++ ROS2 Dashing
+
+## Fixes 
+
+```
+[ERROR] [launch] Caught exception in launch (see debug for traceback): __init__() missing 1 required keyword-only argument: 'node_executable'
+```
+is fixed by changing `executable` to `node_executable` for the each launch python file under `livox_ros2_driver/launch`.
+
+
 # Livox ROS2 Driver([览沃ROS2驱动程序中文说明](https://github.com/Livox-SDK/livox_ros2_driver/blob/master/README_CN.md))
 
 The Livox ROS2 driver is a driver package based on ROS2, specifically used to connect LiDAR products produced by Livox. The driver is recommended to run on ROS2 foxy.
