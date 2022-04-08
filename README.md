@@ -1,6 +1,7 @@
 # Boreal Modifications
 
-## Setup environment
+## Pre-Built Docker Container
+
 See Dockerfile for specific build detail. In short, 
 + L4T 32.5.0
 + ROS2 Dashing
