@@ -7,10 +7,19 @@ See Dockerfile for specific build detail. In short,
 
 ## Fixes 
 
+### Missing `node_executable` argument
+
+When running
+```
+ros2 launch src/livox_ros2_driver/launch/livox_lidar_msg_launch.py
+```
+I got the following error:
 ```
 [ERROR] [launch] Caught exception in launch (see debug for traceback): __init__() missing 1 required keyword-only argument: 'node_executable'
 ```
-is fixed by changing `executable` to `node_executable` for the each launch python file under `livox_ros2_driver/launch`.
+which was fixed by changing `executable` to `node_executable` for the each launch python file under `livox_ros2_driver/launch`.
+
+After `ROS2 Eloquent`, the default seems to have changed to `executable`, but we are still on `ROS2 Dashing`, so we have to change it back to `node_executable`.
 
 
 # Livox ROS2 Driver([览沃ROS2驱动程序中文说明](https://github.com/Livox-SDK/livox_ros2_driver/blob/master/README_CN.md))
